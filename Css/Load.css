@@ -1,0 +1,43 @@
+
+
+.loader{
+
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+ display: flex;
+ background-color:#ECECEC;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 3s,visibility 3s;
+}
+.loader-hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+.car-icon img {
+  position: relative;
+  width: 100px; /* Adjust the size as needed */
+  height: auto;
+  animation: move 1.5s linear infinite; /* Adjust the animation duration as needed */
+}
+/*.loader::after{
+  content: "";
+  width:75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+}*/
+
+@keyframes move {
+  0% {
+    left: -100px;
+  }
+  50% {
+    left: calc(50% - 50px);
+  }
+  100% {
+    left: 100%;
+  }
+}
